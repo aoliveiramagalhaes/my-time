@@ -4,12 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>My Time</title>
+
+
 </head>
 
 <body>
     <ul>
-        <li>20:51 - Bethesda</li>
-        <li>21:51 - Sao Paulo</li>
+        <li id="time-bethesda">20:51 - Bethesda</li>
+        <li id="time-sao-paulo">21:51 - Sao Paulo</li>
     </ul>
+
+    <script>
+        let now = new Date()
+
+        document.getElementById("time-bethesda").innerHTML = "hey"
+        document.getElementById("time-sao-paulo").innerHTML = "ola"
+    </script>
 </body>
 </html>
