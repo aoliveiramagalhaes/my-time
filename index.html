@@ -10,18 +10,19 @@
 
 <body>
     <ul>
-        <li id="time-bethesda"></li>
+        <li id="time-new-york"></li>
         <li id="time-sao-paulo"></li>
     </ul>
 
     <script>
         let now = new Date()
 
-        let nowBethesda = now.toLocaleString('en-US', { timeZone: 'America/New_York' })
+        // convert Date object into a localized string
+        let nowNewYork = now.toLocaleString('en-US', { timeZone: 'America/New_York' })
         let nowSaoPaulo = now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 
-        document.getElementById("time-bethesda").innerHTML = nowBethesda
-        document.getElementById("time-sao-paulo").innerHTML = nowSaoPaulo 
+        document.getElementById("time-new-york").innerHTML = "New York - " + nowNewYork
+        document.getElementById("time-sao-paulo").innerHTML = "Sao Paulo - " + nowSaoPaulo 
     </script>
 </body>
 </html>
