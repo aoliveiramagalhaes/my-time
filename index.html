@@ -1,28 +1,96 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>My Time</title>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>My Time</title>
 </head>
 
 <body>
-    <ul>
-        <li id="time-new-york"></li>
-        <li id="time-sao-paulo"></li>
-    </ul>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Timezone</h1>
+        <p class="lead">This is a simple timezone page that whows the time in Sao Paulo and New York.</p>
+        <hr class="my-4">
+        <p class="font-italic">It's impressive what a simple code can do!.</p>
+    </div>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 col-sm-8">
+
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="./images/Sao Paulo.jpg" class="card-img-top" style="max-height: 150px"
+                        alt="Image of Sao Paulo">
+                    <div class="card-body">
+                        <h5 class="card-title">Sao Paulo</h5>
+                        <p class="card-text">Sao Paulo is the biggest city in Brazil.</p>
+                        <a href="https://www.lonelyplanet.com/brazil/sao-paulo" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-sm-8">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="./images/New York.jpg" class="card-img-top" style="max-height: 150px"
+                        alt="Image of New York">
+                    <div class="card-body">
+                        <h5 class="card-title">New York</h5>
+                        <p class="card-text">New York is the most famous city in the USA.</p>
+                        <a href="https://www.lonelyplanet.com/usa/new-york-city" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-sm-8">
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Sao Paulo</th>
+                            <th scope="col" class="text-center">New York</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="text-center" id="time-sao-paulo">Sao Paulo</p>
+                            </td>
+                            <td>
+                                <p class="text-center" id="time-new-york">New York</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 
     <script>
-        let now = new Date()
+        function updateTime() {
+            let now = new Date()
 
-        // convert Date object into a localized string
-        let nowNewYork = now.toLocaleString('en-US', { timeZone: 'America/New_York' })
-        let nowSaoPaulo = now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+            // convert Date object into a localized string
+            let nowNewYork = now.toLocaleString('en-US', { timeZone: 'America/New_York' })
+            let nowSaoPaulo = now.toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 
-        document.getElementById("time-new-york").innerHTML = "New York - " + nowNewYork
-        document.getElementById("time-sao-paulo").innerHTML = "Sao Paulo - " + nowSaoPaulo 
+            document.getElementById("time-new-york").innerHTML = nowNewYork
+            document.getElementById("time-sao-paulo").innerHTML = nowSaoPaulo
+        }
+        updateTime()
+        window.setInterval(updateTime, 1000)
     </script>
+
+    <footer class="text-center py-2">Developed by Aline Magalhaes &copy;</footer>
+
 </body>
+
 </html>
