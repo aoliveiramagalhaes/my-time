@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>My Time</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+        <title>My Time</title>
+    <link rel="icon" type="image/png" href="./images/clock.png">
 </head>
 
 <body>
@@ -17,7 +19,7 @@
         <h1 class="display-4">Timezone</h1>
         <p class="lead">This is a simple timezone page that displays the local time in São Paulo and New York.</p>
         <hr class="my-4">
-        <p class="font-italic">It's impressive what a simple code can do!</p>
+        <p class="font-italic">It's impressive what a few code can do!</p>
     </div>
 
     <div class="container">
@@ -73,7 +75,6 @@
         </div>
     </div>
 
-
     <script>
         function updateTime() {
             let now = new Date()
@@ -89,8 +90,9 @@
         window.setInterval(updateTime, 1000)
     </script>
 
-    <footer class="text-center py-2">Developed by <span class="font-weight-bold">Aline Magalhaes &copy;</span></footer>
+    <footer class="text-center py-2">Developed by <span class="font-weight-bold">Aline Magalhaes &copy;</span>
+    <h6 class="flaticon">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></h6>
+    </footer>
 
 </body>
-
 </html>
